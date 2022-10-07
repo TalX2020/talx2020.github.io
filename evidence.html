@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>CMM-test006</title>
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+          integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" rel="stylesheet">
+    <script crossorigin="anonymous"
+            integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/talx.js"></script>
+</head>
+<body style="overflow-y: scroll">
+
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#"></a>
+        <button aria-controls="offcanvasDarkNavbar" class="navbar-toggler"
+                data-bs-target="#offcanvasDarkNavbar" data-bs-toggle="offcanvas" type="button">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div aria-labelledby="offcanvasDarkNavbarLabel" class="offcanvas offcanvas-end text-bg-dark"
+             id="offcanvasDarkNavbar" tabindex="-1">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Menu</h5>
+                <button aria-label="Close" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                        type="button"></button>
+            </div>
+            <div class="offcanvas-body text-bg-dark">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="leadership.html">Leadership</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="evidence.html">Evidence</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="partnership.html">Partnership</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="resource.html">Resource</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="actions.html">Actions</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- Content: top of page -->
+<div class="container">
+    <div class="row">
+        <!-- smallest to large (lg) screen -->
+        <div class="col-lg-6 d-lg-none text-center">
+            <img alt="Leadership" class="img-fluid" src="images/evidence_landing.jpg">
+        </div>
+        <!-- xl screen only -->
+        <div class="col-xl-6 d-none d-lg-block d-xl-none text-center">
+            <img alt="Leadership" class="img-fluid" src="images/evidence_landing.jpg">
+        </div>
+        <div class="col-xl-7 col-xxl-6">
+            <h1>Evidence</h1>
+            <p>Evidence is what you need to know in order to make better decisions when developing adaptation partnerships and assessing impacts, risks and progress towards a well adapting place. It supports evolving knowledge of what works and tests assumptions embedded in adaptation plans to inform and improve future practice and help design adaptation options. The evidence base should be co-developed and include local knowledge and lived experience as well as more formal data sources. It is vital that the evidence is translated and communicated so that it is relevant and easy to understand. Key aspects include:</p>
+
+            <ul class="fw-bold">
+                <li>Co-Developing & Maintaining an Evidence base</li>
+            </ul>
+            <p>The partnership should focus on co-developing an evidence base in a way that builds trust, supports transparency and includes more than the usual suspects (such as the council, land owners government and larger stakeholders) from the beginning. Local knowledge and lived experience should be valued equally alongside more formal data and evidence from peer reviewed publications and official sources. An evidence base is never “complete” it is like a living thing which some parts need to grow and others need to be maintained, as evidence needs change through time.</p>
+
+            <ul class="fw-bold">
+                <li>Communicating & Understanding the Evidence</li>
+            </ul>
+            <p>Evidence is only useful if it is relevant, understandable and useable.  A place-based partnership will have a range of people and organisations involved and they will interact with the evidence in different ways depending on how it impacts on their own work and life, their particular areas of interest and responsibilities, mindsets and the power they have to make decisions.  To bring evidence to life it needs to be translated into knowledge and shared in accessible formats which are useful to the people who need to know about it at that point in time. The partnership should share evidence clearly, openly, and consistently. Cultural and creative practice should be integral to developing and communicating evidence and involving wider society in the changes needed to adapt.</p>
+
+            <ul class="fw-bold">
+                <li>Monitoring, evaluating and learning</li>
+            </ul>
+            <p>It is important to be able to monitor and evaluate the impact of adaptation plans and progress of places using indicators related to discrete ‘bits’ of evidence gathered, and how it and the processes which shape and interconnect the evidence shift over temporal and spatial scales. Adaptation will require both incremental (small) and systemic changes (transformative and/or holistic changes). To support this the partnership should develop evidence and insights of interactions between climate risks and wider social, economic, and natural systems. Levers of change (Tipping points) and ‘opportunities for collaborative mapping of the system to identify windows of opportunity and levers for change.  This will help to prioritise influencing activities most effectively.</p>
+        </div>
+        <div class="col-xl-5 col-xl-5 col-xxl-6 d-none d-xl-block">
+            <img alt="Leadership" class="img-fluid" src="images/evidence_landing.jpg">
+        </div>
+    </div>
+</div>
+
+<!-- spacer -->
+<div class="mt-5 col-md-12"></div>
+
+<!-- Content: middle of page -->
+<div class="container px-0">
+
+    <!--Start outer accordion-->
+    <div class="accordion accordion-flush d-grid gap-4" id="leadership-accordion">
+
+        <!-- Stage 1 accordion -->
+        <div class="accordion-item border">
+            <!-- Stage 1 accordion: Header -->
+            <h2 class="accordion-header" id="action-1-header">
+                <button aria-controls="action-1-content" aria-expanded="false" class="accordion-button collapsed"
+                        data-bs-target="#action-1-content" data-bs-toggle="collapse" type="button">
+                    Stage 1
+                </button>
+            </h2>
+            <!-- Stage 1 accordion: Content -->
+            <div aria-labelledby="action-1-header" class="accordion-collapse collapse"
+                 data-bs-parent="#leadership-accordion" id="action-1-content">
+                <!--<div class="accordion-body"></div>-->
+
+                <!-- Start inner accordion -->
+                <div class="accordion accordion-flush" id="action-1-accordion">
+
+                    <!-- Stage 1/Action 1A accordion -->
+                    <div class="accordion-item p-4 bg-light">
+                        <!-- Stage 1/Action 1A accordion: Header -->
+                        <h2 class="accordion-header" id="action-1a-header">
+                            <button aria-controls="action-1a-content" aria-expanded="false"
+                                    class="accordion-button collapsed"
+                                    data-bs-target="#action-1a-content" data-bs-toggle="collapse" type="button">
+                                Action 1A - Surveying existing evidence
+                            </button>
+                        </h2>
+                        <!-- Stage 1/Action 1A accordion: Content -->
+                        <div aria-labelledby="action-1a-header" class="accordion-collapse collapse"
+                             data-bs-parent="#action-1-accordion"
+                             id="action-1a-content">
+                            <div class="accordion-body">
+
+                                <p>Carry out a desk-based baseline survey and map what evidence is available (both formal and informal), how data is collected and analysed, how it has changed and predicted to change over differing time periods and spatial scales, quality and accessibility.</p>
+                                <p><span class="fw-bold">In order to know what evidence you need to gather it helps to define the potential spatial boundaries, the goals and vision of the adapting place</span> (See Partnerships Action 1A: Build relationships and Leadership Action 1A: Create and implement a vision for the future).</p>
+                                <p>This first step is desk-based and is focused on collating existing evidence. At this stage it is a good idea to connect and build relationships with researchers and those who hold evidence within their organisations - often folk are happy to help and share the evidence and insights that they hold. You might also be able to form collaborations with research partners and benefit from student projects to support this work.  You might have some time to do this yourself or you might commission someone else to gather the data for you such as a consultancy or as a research project.</p>
+
+                                <p>This table provides a good start to listing who might be useful to contact and get involved.</p>
+                                <!--<p class="fw-bold mb-0">This table provides a good start to listing who might be useful to contact and get involved.</p>-->
+                                <table class="table table-striped border">
+                                    <tr>
+                                        <th>Stakeholder/ Organisation</th>
+                                        <th>Interest/ Responsibilities</th>
+                                        <th>Potential evidence source (what types of evidence might they know of or have access to)</th>
+                                        <th>Vulnerable to exclusion and impacts ( e.g. more socio-economically disadvantaged people who will be impacted most by the Climate Risks)</th>
+                                        <th>Critical Participation? (e.g. Decision makers or land/key asset owners who are essential in order to make things happen)</th>
+                                    </tr>
+                                    <tr>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                    </tr>
+                                </table>
+
+
+                                <p class="fst-italic mb-0">Resources:</p>
+                                <ul style="list-style:' '">
+                                    <li>
+                                        Tools that can support you developing your stakeholder analysis include:
+                                        <a href="https://climate-adapt.eea.europa.eu/knowledge/tools/urban-ast/step-1-6"
+                                           target="_blank">https://climate-adapt.eea.europa.eu/knowledge/tools/urban-ast/step-1-6
+                                        </a>
+                                    </li>
+                                </ul>
+
+                                <p><span class="fw-bold">Evidence can be formal</span> - so peer reviewed and published in the scientific literature and within governmental databases, and/or more informal which could include local records such as citizen science weather stations and church records and stories within an area.  Types of evidence could include:</p>
+                                <ul class="px-3">
+                                    <li>Environmental - e.g.: weather data & models, biodiversity records, habitat & geological mapping, flooding and erosion historical data and predictions (including the data needed)</li>
+                                    <li>Social - current population density maps & future population projections, behavioural & perception of risk data for the local population, any mapping of vulnerable population data</li>
+                                    <li>Economic - Administrative boundaries, critical infrastructure and buildings, employment & sectoral data, funding availability</li>
+                                    <li>Political - what relevant governmental policies (local & national) are in place already? How much budget is available for Climate Action and especially in relation to Climate Risk and Adaptation? Land use designations including areas for development & natural protection designations, Legislation and pledges.</li>
+                                    <li>Cultural.  Mapping cultural heritage assets, Surveys for example what people connected to the place value the most and why?</li>
+                                    <li>Informal impacts data such as in local media reports that describe the consequences of recent extreme weather e.g. school closures, impacts on health services etc.</li>
+                                </ul>
+
+                                <p>There can also be different scales of evidence in terms of spatial relevance and also temporal - when and where were the data collected? Have they been repeated?  There may be restricted access to certain types of data - for example biodiversity data of a rare species or data that is commercially sensitive.</p>
+
+                                <p class="fw-bold fst-italic mb-0">Resources:</p>
+                                <p class="mb-0">This document can help you start thinking about data at different spatial and temporal scales.</p>
+                                <p class="fst-italic">
+                                    <a href="https://unfccc.int/sites/default/files/resource/AC%20adaptation%20data%20full.pdf" target="_blank">
+                                       https://unfccc.int/sites/default/files/resource/AC%20adaptation%20data%20full.pdf</a>
+                                </p>
+
+                                <p>There are many sources of international Level data available with IPCC reports being the most well known synthesis of current knowledge at the time of their publication -
+                                    <a href="www.ipcc.ch" target="_blank">www.ipcc.ch</a>
+                                    - Currently the sixth Assessment reports on Climate Impacts Adaptation & Vulnerability and the physical science basis are the most recent. These are huge documents - but there are regional factsheets, frequently asked questions and a global to regional interactive atlas.</p>
+                                <ul class="px-3">
+                                    <li>National level data - there are Climate Risk Assessments which have been broken down into digestible chunks depending on the time and capacity available. For the nations within the UK -
+                                        <a href="https://www.ukclimaterisk.org/" target="_blank">https://www.ukclimaterisk.org/</a>
+                                        includes national summaries of evidence of Climate Risk at country level and also sectoral briefings which are very useful for reviewing quickly what types of evidence might be needed and what is available already.
+                                    </li>
+                                    <li><a href="https://www.rspb.org.uk/globalassets/downloads/policy-briefings/nature-based-solutions-adaption-report.pdf"
+                                           target="_blank">https://www.rspb.org.uk/globalassets/downloads/policy-briefings/nature-based-solutions-adaption-report.pdf</a>
+                                    </li>
+                                    <li>For the Republic of Ireland there is the
+                                        <a href="https://www.epa.ie/publications/research/climate-change/research-386-the-status-of-irelands-climate-2020.php"
+                                           target="_blank">https://www.epa.ie/publications/research/climate-change/research-386-the-status-of-irelands-climate-2020.php</a>
+                                        - The latest status report for Irelands Climate (2020).
+                                    </li>
+                                    <li>There are more reports available on a range of topics on the EPA website. There is also lots of national weather data available:</li>
+                                    <li><a href="https://www.metoffice.gov.uk/weather/climate/uk-climate" target="_blank">https://www.metoffice.gov.uk/weather/climate/uk-climate</a>
+                                        - UK wide Climate Data including some local and regional records and monitoring and for Ireland
+                                        <a href="https://www.met.ie/climate/climate-change" target="_blank">https://www.met.ie/climate/climate-change.</a>
+                                        <a href="https://www.climateireland.ie/#!/" target="_blank">https://www.climateireland.ie/#!/</a>
+                                        brings together multiple tools and data sources for Ireland;
+                                        <a href="https://www.adaptationscotland.org.uk" target="_blank">https://www.adaptationscotland.org.uk</a>
+                                        does the same for Scotland and
+                                        <a href="https://climatenorthernireland.org.uk/" target="_blank">https://climatenorthernireland.org.uk/</a>
+                                        and the NIadapts tool provides links for Northern Ireland.
+                                    </li>
+                                    <li><a href="https://www.climate-lab-book.ac.uk/2016/long-term-climatic-changes/" target="_blank">https://www.climate-lab-book.ac.uk/2016/long-term-climatic-changes/</a>
+                                        - This provides some unusual local examples of Climate Data records to inspire thinking around different peoples sources of data.
+                                    </li>
+                                </ul>
+
+                                <p>There will be a wide range in the local level data available which can be accessed as part of a desk based study such as from Local media reports but it is at the next step you will progress to contacting people to increase the evidence base beyond what is readily available.</p>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Stage 1/Action 1B accordion -->
+                    <div class="accordion-item p-4 bg-light">
+                        <!-- Stage 1/Action 1B accordion: Header -->
+                        <h2 class="accordion-header" id="action-1b-header">
+                            <button aria-controls="action-1b-content" aria-expanded="false"
+                                    class="accordion-button collapsed"
+                                    data-bs-target="#action-1b-content" data-bs-toggle="collapse" type="button">
+                                Action 1B - Co-develop shared evidence
+                            </button>
+                        </h2>
+                        <!-- Stage 1/Action 1B accordion: Content -->
+                        <div aria-labelledby="action-1b-header" class="accordion-collapse collapse"
+                             data-bs-parent="#action-1-accordion"
+                             id="action-1b-content">
+                            <div class="accordion-body">
+
+                                <p>This is an opportunity to build a shared evidence base that the partners jointly own and can use to inform decision making and action. This will build on the evidence collected in the desk-based study and identify the priorities within your place and will identify data needed to understand the impact of potential solutions and inform decision making. Exploring specific problems facing a place helps to develop a deeper understanding of how to increase resilience and what evidence is needed and available.</p>
+
+                                <p><span class="fw-bold">Facilitate discussions</span> - A starting point for codeveloping the evidence base is to present existing evidence (Evidence Action 1A) and facilitate a workshop/ conversation/ set of interviews to begin discussing how the place is being impacted by climate change. Map based activities where participants describe their experiences of local impacts can be very powerful as are used in many existing supporting toolkits including NI Adapts and the Outer Hebrides community planning project (See resources below).</p>
+
+                                <p>The LCLIP and BACLIAT tools also include workshops which will support the co-development of the evidence base and Impact interview templates and examples of community mapping.</p>
+
+                                <p>This process brings in lived experience and helps people become familiar with the evidence - builds shared understanding among partners and enables those who are not climate change experts to connect and contribute. The benefit of shared evidence base is that all partners have access to consistent, co-developed evidence. This reduces duplication of effort and results in economies of scale.</p>
+
+                                <p><span class="fw-bold">Define who needs to be involved</span> - Stakeholders are all those who need to be considered in achieving the well adapting place vision and whose participation and support are crucial to its success. (See stakeholder mapping in Resource action 1C and vision in Leadership action 1C). Co-development working with stakeholders in both the development of the vision, collation of the evidence, and design and implementation, is a key to - but not a guarantee of - success.</p>
+                                <ul class="px-3">
+                                    <li>
+                                        <a href="https://www.adaptationscotland.org.uk/get-involved/our-projects/place-standard-tool-climate-lens-co-creating-local-climate-s"
+                                           target="_blank">https://www.adaptationscotland.org.uk/get-involved/our-projects/place-standard-tool-climate-lens-co-creating-local-climate-s</a>
+                                        Thinking through a Climate Lens about what people want from a place
+                                    </li>
+                                </ul>
+
+                                <p class="fst-italic mb-0">Resources:</p>
+
+                                <p>
+                                    One way of doing this is through a workshop such as described here:
+                                    <a href="https://www.niadapts.org.uk/get-started/step-2"
+                                       target="_blank">https://www.niadapts.org.uk/get-started/step-2.</a>
+                                    It is also vital to start thinking about how you will monitor and evaluate any change and what data changes you could track as Indicators (SEE 2BE).
+                                </p>
+                                <p>
+                                    Creating a Local Climate Impacts Profile
+                                    <a href="https://www.ukcip.org.uk/wizard/current-climate-vulnerability/lclip/"
+                                       target="_blank">https://www.ukcip.org.uk/wizard/current-climate-vulnerability/lclip/</a>
+                                    is one way to start your assessment of what local impact and weather data are available or the BACLIAT workshop tool
+                                    <a href="https://www.ukcip.org.uk/wizard/future-climate-vulnerability/bacliat/"
+                                       target="_blank">https://www.ukcip.org.uk/wizard/future-climate-vulnerability/bacliat/.</a>
+                                </p>
+
+                                <p>
+                                    It is also important to ask other local people and organisations what data might be available. In order to know who to ask it might be useful to carry out a stakeholder analysis (See Action 1B-E).
+                                </p>
+
+                                <p>
+                                    <a href="https://lanntair.com/creative-programme/outer-hebrides-climate-beacon/"
+                                       target="_blank">https://lanntair.com/creative-programme/outer-hebrides-climate-beacon/</a>
+                                    An example of using arts to generate qualitative societal data to feed into an inclusive Climate Change Adaptation Plan in Scotland.
+                                </p>
+
+                                <p>
+                                    <a href="https://www.london.gov.uk/sites/default/files/climate_change_risks_for_london_-_a_review_of_evidence_under_1.5degc_and_different_warming_scenarios.pdf"
+                                       target="_blank">https://www.london.gov.uk/sites/default/files/climate_change_risks_for_london_-_a_review_of_evidence_under_1.5degc_and_different_warming_scenarios.pdf</a>
+                                </p>
+
+                                <p>
+                                    <a href="https://unhabitat.org/climate-change-vulnerability-and-risk-%E2%80%93-a-guide-for-community-assessments-action-planning-and"
+                                       target="_blank">https://unhabitat.org/climate-change-vulnerability-and-risk-%E2%80%93-a-guide-for-community-assessments-action-planning-and</a>
+                                    - Although aimed at Developing countries this is useful from a community based lens and participatory methodologies.
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Stage 1/Action 1C accordion -->
+                    <div class="accordion-item p-4 bg-light">
+                        <!-- Stage 1/Action 1C accordion: Header -->
+                        <h2 class="accordion-header" id="action-1c-header">
+                            <button aria-controls="action-1c-content" aria-expanded="false"
+                                    class="accordion-button collapsed"
+                                    data-bs-target="#action-1c-content" data-bs-toggle="collapse" type="button">
+                                Action 1C - Setting in place monitoring, evaluation and learning
+                            </button>
+                        </h2>
+                        <!-- Stage 1/Action 1C accordion: Content -->
+                        <div aria-labelledby="action-1c-header" class="accordion-collapse collapse"
+                             data-bs-parent="#action-1-accordion"
+                             id="action-1c-content">
+                            <div class="accordion-body">
+
+                                <p>Monitoring, evaluation and learning need to be embedded in the early stages of developing an adaptation partnership to be able to track what is working and what doesn’t and to track effective use of resources.  </p>
+
+                                <p><span class="fw-bold">Promote effective learning</span> - Effective learning has many aspects. These include: the mindset in the people involved; culture, knowledge management systems, opportunities for reflection in processes, tailoring and application of evidence for specific purposes. Looking outward for promising practices and reflection on internal practice can be useful, including the more tacit stuff that is often not written down and is generally passed through relationships. Therefore; it is important to build in opportunities for groups to meet and share practice and progress (as has been the case with the TalX project)</p>
+
+                                <p><span class="fw-bold">Track Progress</span> - It is useful to document assumptions and track vision and learning in relation to what the partners want to achieve together and set indicators and framework to assesses progress for example using a benchmarking tool.  Some examples of benchmarking tools to track progress include:</p>
+
+                                <p>
+                                    <a href="https://www.adaptationscotland.org.uk/how-adapt/your-sector/public-sector/benchmarking"
+                                       target="_blank">https://www.adaptationscotland.org.uk/how-adapt/your-sector/public-sector/benchmarking</a>
+                                </p>
+
+                                <p>
+                                    <a href="https://www.iso.org/standard/68507.html"
+                                       target="_blank">https://www.iso.org/standard/68507.html ISO 14090:2019</a>
+                                    Adaptation to climate change - Principles, requirements and guidelines.
+                                </p>
+
+                                <p class="fw-bold">As part of this TalX toolkit there is a Benchmarking tool included for you to use and adapt to your place.</p>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Stage 2 accordion -->
+        <div class="accordion-item border">
+            <!-- Stage 2 accordion: Header -->
+            <h2 class="accordion-header" id="action-2-header">
+                <button aria-controls="action-2-content" aria-expanded="false" class="accordion-button collapsed"
+                        data-bs-target="#action-2-content" data-bs-toggle="collapse" type="button">
+                    Stage 2
+                </button>
+            </h2>
+            <!-- Stage 2 accordion: Content -->
+            <div aria-labelledby="action-2-header" class="accordion-collapse collapse"
+                 data-bs-parent="#leadership-accordion" id="action-2-content">
+                <!--<div class="accordion-body"></div>-->
+
+                <!-- Start inner accordion -->
+                <div class="accordion accordion-flush" id="action-2-accordion">
+
+                    <!-- Stage 2/Action 2A accordion -->
+                    <div class="accordion-item p-4 bg-light">
+                        <!-- Stage 2/Action 2A accordion: Header -->
+                        <h2 class="accordion-header" id="action-2a-header">
+                            <button aria-controls="action-2a-content" aria-expanded="false"
+                                    class="accordion-button collapsed"
+                                    data-bs-target="#action-2a-content" data-bs-toggle="collapse" type="button">
+                                Action 2A - Co-Develop and strengthen evidence to inform adaptation planning and action
+                            </button>
+                        </h2>
+
+                        <!-- Stage 2/Action 2A accordion: Content -->
+                        <div aria-labelledby="action-2a-header" class="accordion-collapse collapse"
+                             data-bs-parent="#action-2-accordion"
+                             id="action-2a-content">
+                            <div class="accordion-body">
+
+                                <p>Run user needs workshops focusing on ensuring the evidence base is decision relevant and to understand different motivations driving the process. It may include a gap analysis identifying where evidence gaps exist and prioritising what/who will be necessary to fill these, based upon the needs and priorities of the partnership. This builds on the baseline evidence gathered in stage 1 and starts to prioritise what evidence still needs to be gathered and how to commission it. Identifying the objectives and vulnerabilities of all stakeholders helps to ensure that maladaptation is avoided.</p>
+
+                                <p>
+                                    <a href="https://www.climatejust.org.uk/"
+                                       target="_blank">https://www.climatejust.org.uk/</a>
+                                    Provides some background and maps for the UK to trigger thinking on vulnerability data and how it relates to climate change risk and actions.
+                                </p>
+
+                                <p>
+                                    <a href="https://historicengland.org.uk/whats-new/research/building-climate-resilience-through-community-landscapes-and-cultural-heritage/"
+                                       target="_blank">https://historicengland.org.uk/whats-new/research/building-climate-resilience-through-community-landscapes-and-cultural-heritage/</a>
+                                </p>
+
+                                <p>Setting a Data Repository Sharing agreement and ownership of data can help in ensuring good working practices within the place. Governments involved in the World Meteorological Organisation (193 Countries) have agreed to exchange climate and weather data freely since the World Meteorological Congress in 2021.</p>
+
+                                <p>
+                                    There are international data repositories for Climate Data such as
+                                    <a href="https://cds.climate.copernicus.eu/#!/home"
+                                       target="_blank">https://cds.climate.copernicus.eu/#!/home</a>
+                                    and
+                                    <a href="https://data.cdp.net/"
+                                       target="_blank">https://data.cdp.net/</a>
+                                    however it is useful to bring together local data for a place in a transparent sharable way.
+                                </p>
+
+                                <p>
+                                    One way of strengthening the usability of the evidence base is to develop case studies which provide real world examples and stories which aid in the communication of understanding potential problems and solutions. There are multiple examples of case studies within this toolkit but there are also more here:
+                                    <a href="https://www.adaptationscotland.org.uk/how-adapt/case-studies"
+                                       target="_blank">https://www.adaptationscotland.org.uk/how-adapt/case-studies</a>
+                                    here:
+                                    <a href="https://www.climateireland.ie/#!/tools/caseStudies"
+                                       target="_blank">https://www.climateireland.ie/#!/tools/caseStudies</a>
+                                    and here
+                                    <a href="https://climatenorthernireland.org.uk/publication_cat/case-study/"
+                                       target="_blank">https://climatenorthernireland.org.uk/publication_cat/case-study/</a>
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Stage 2/Action 2B accordion -->
+                    <div class="accordion-item p-4 bg-light">
+                        <!-- Stage 2/Action 2B accordion: Header -->
+                        <h2 class="accordion-header" id="action-2b-header">
+                            <button aria-controls="action-2b-content" aria-expanded="false"
+                                    class="accordion-button collapsed"
+                                    data-bs-target="#action-2b-content" data-bs-toggle="collapse" type="button">
+                                Action 2B - Co-Develop the framework for risk assessment and implement it
+                            </button>
+                        </h2>
+                        <!-- Stage 2/Action 2B accordion: Content -->
+                        <div aria-labelledby="action-2b-header" class="accordion-collapse collapse"
+                             data-bs-parent="#action-2-accordion"
+                             id="action-2b-content">
+                            <div class="accordion-body">
+
+                                <p>Co-developing the risk assessment framework ensures that there is transparency around the understanding of priority climate risks and actions needed to reduce their impact and take advantage of any opportunities, in relation to the people and organisations involved in developing a well adapting place ensuring that vulnerabilities are also considered.</p>
+
+                                <p>This is a significant stage of work and can be very time and resource intensive as it needs to be co-developed.  This includes using published research, data and analytics alongside local knowledge and lived experience to create a shared evidence based that can be used to develop adaptation plans and actions.</p>
+
+                                <p><span class="fw-bold">Focus on codesign of the expanded evidence base</span> - develop collaborations with those who can support you to build the evidence base, work with stakeholders to ensure that any new evidence is decision relevant and scope out the work required to develop the evidence.</p>
+
+                                <p>This is building on your baseline evidence gathered in stage 1 and starting to prioritise what evidence needs to be gathered first and how to commission it.  This will also link to funding priorities and deciding what work needs to be commissioned or developed in house.</p>
+
+                                <p><span class="fw-bold">Measure risk and vulnerability</span> - There are many examples of Risk and vulnerability assessments at national and local government scale and the methodology is often scalable to other places.</p>
+
+                                <p class="fst-italic fw-bold mb-0">Resources:</p>
+
+                                <p>
+                                    An example from London
+                                    <a href="https://orca.cardiff.ac.uk/id/eprint/53010/1/ewp44.pdf"
+                                       target="_blank">https://orca.cardiff.ac.uk/id/eprint/53010/1/ewp44.pdf</a>
+                                </p>
+
+                                <p>
+                                    <a href="https://www.iso.org/standard/68508.html"
+                                       target="_blank">https://www.iso.org/standard/68508.html ISO 14091:2021</a>
+                                    Adaptation to climate change - Guidelines on vulnerability, impacts and risk assessment
+                                </p>
+
+                                <p>
+                                    <a href="https://www.c40knowledgehub.org/s/article/Climate-Change-Risk-Assessment-Guidance?language=en_US"
+                                       target="_blank">https://www.c40knowledgehub.org/s/article/Climate-Change-Risk-Assessment-Guidance?language=en_US</a>
+                                </p>
+
+                                <p>
+                                    <a href="https://www.adaptationscotland.org.uk/how-adapt/your-sector/public-sector/framework/understanding-challenge/intermediate/uc2a-develop-understanding-climate-risk-and-vulnerability"
+                                       target="_blank">https://www.adaptationscotland.org.uk/how-adapt/your-sector/public-sector/framework/understanding-challenge/intermediate/uc2a-develop-understanding-climate-risk-and-vulnerability</a>
+                                    This provides an example of actions and case studies from a Scottish Context.
+                                </p>
+
+                                <p>
+                                    Climate Ready Clyde risk assessment
+                                    <a href="https://www.crc-assessment.org.uk/methodology"
+                                       target="_blank">https://www.crc-assessment.org.uk/methodology</a>
+                                </p>
+
+                                <p>
+                                    A recent example from the Orkney Islands:
+                                    <a href="https://storymaps.arcgis.com/stories/a3070cebd596467783f1c7f88ce4809e"
+                                       target="_blank">https://storymaps.arcgis.com/stories/a3070cebd596467783f1c7f88ce4809e</a>
+                                </p>
+
+                                <p>
+                                    <a href="https://data.london.gov.uk/dataset/climate-risk-mapping"
+                                       target="_blank">https://data.london.gov.uk/dataset/climate-risk-mapping</a>
+                                    A series of London-wide climate risk maps analysing climate exposure and vulnerability. These maps were produced to help deliver equitable responses to the impacts of climate change and target resources to support communities at highest risk.
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Stage 2/Action 2C accordion -->
+                    <div class="accordion-item p-4 bg-light">
+                        <!-- Stage 2/Action 2C accordion: Header -->
+                        <h2 class="accordion-header" id="action-2c-header">
+                            <button aria-controls="action-2c-content" aria-expanded="false"
+                                    class="accordion-button collapsed"
+                                    data-bs-target="#action-2c-content" data-bs-toggle="collapse" type="button">
+                                Action 2C - Plan development, tracking, and sharing of evidence
+                            </button>
+                        </h2>
+                        <!-- Stage 2/Action 2C accordion: Content -->
+                        <div aria-labelledby="action-2c-header" class="accordion-collapse collapse"
+                             data-bs-parent="#action-2-accordion"
+                             id="action-2c-content">
+                            <div class="accordion-body">
+
+                                <p>Use social, environmental and economic data holistically to develop indicators and metrics of progress or success and ensure monitoring and evaluation feeds back into the evidence base and informs the development of future indicators, adaptation options and developing delivery targets and plans.</p>
+
+                                <p><span class="fw-bold">Benchmark progress</span> to ensure that the right indicators are used to track progress and informs the development of future indicators used to track climate risk. There needs to be monitoring and evaluation review cycles and independent reporting of progress & resourcing at all stages, from plan development and building a business case, to developing indicators to measure the impact and delivery of the plan. There may be specific reporting required for funders and different members within the partnership and it should be developed at the right scale for the task - monitoring both overall progress of the adaptation strategy and also specific adaptation actions within programmes.</p>
+
+                                <p class="fst-italic fw-bold mb-0">Resources:</p>
+
+                                <p>
+                                    <a href="https://www.adaptationscotland.org.uk/application/files/4215/5799/7134/M__E_Summary__Resources___Final.pdf"
+                                       target="_blank">https://www.adaptationscotland.org.uk/application/files/4215/5799/7134/M__E_Summary__Resources___Final.pdf</a>
+                                    Provides some background on monitoring and evaluation and indicators.
+                                </p>
+
+                                <p>
+                                    This is a link to evaluating the impact of Nature Based Solutions from Europe
+                                    <a href="https://ec.europa.eu/info/news/evaluating-impact-nature-based-solutions-handbook-practitioners-2021-may-06_en"
+                                       target="_blank">https://ec.europa.eu/info/news/evaluating-impact-nature-based-solutions-handbook-practitioners-2021-may-06_en</a>
+                                    and Nature Based Solutions evidence tracking here:
+                                    <a href="https://www.naturebasedsolutionsevidence.info/"
+                                       target="_blank">https://www.naturebasedsolutionsevidence.info/</a>
+                                </p>
+                                <p>
+                                    <a href="https://www.bto.org/our-science/publications/peer-reviewed-papers/framework-climate-change-adaptation-indicators-natural"
+                                       target="_blank">A framework for climate change adaptation indicators for the natural environment | BTO - British Trust for Ornithology</a>
+                                </p>
+
+                                <p>
+                                    <a href="https://adaptationmetrics.org/"
+                                       target="_blank">https://adaptationmetrics.org/</a>
+                                </p>
+
+                                <p>
+                                    <a href="https://unepdtu.org/wp-content/uploads/2019/09/adaptation-metrics-current-landscape-and-evolving-practices.pdf"
+                                       target="_blank">https://unepdtu.org/wp-content/uploads/2019/09/adaptation-metrics-current-landscape-and-evolving-practices.pdf</a>
+                                </p>
+
+                                <p>
+                                    <a href="https://opendocs.ids.ac.uk/opendocs/handle/20.500.12413/17385"
+                                       target="_blank">https://opendocs.ids.ac.uk/opendocs/handle/20.500.12413/17385</a>
+                                </p>
+
+                                <p>
+                                    <a href="https://portals.iucn.org/library/node/49070"
+                                       target="_blank">https://portals.iucn.org/library/node/49070</a>
+                                    IUCN Global Standard for Nature-based Solutions: first edition
+                                </p>
+
+                                <p><span class="fw-bold">Use social, environmental and economic data holistically</span> to create a business case for exploring adaptation options and developing delivery targets and plans. - Please see How to Create a Business Case (Partnership action 1B)</p>
+
+                                <p><span class="fw-bold">Carry out political economy mapping - commissioning research</span> - Political economy mapping systematically assesses and maps the political economy of a place to explore opportunities for a safer climate economy. There is an example here:</p>
+
+                                <p>
+                                    <a href="http://climatereadyclyde.org.uk/political-economy-mapping-of-adaptation-and-climate-resilience-in-glasgow-city-region/"
+                                       target="_blank">http://climatereadyclyde.org.uk/political-economy-mapping-of-adaptation-and-climate-resilience-in-glasgow-city-region/</a>
+                                    and some further background and more examples here:
+                                    <a href="https://europa.eu/capacity4dev/file/11174/download?token=1N9xFSAp"
+                                       target="_blank">https://europa.eu/capacity4dev/file/11174/download?token=1N9xFSAp</a>
+                                </p>
+
+                                <p><span class="fw-bold">Identify and overcome biases inherent in decision making practices</span> (e.g. anchoring). - systemic approaches that are holistic</p>
+
+                                <p>Barriers in the decision making process sometimes include the differing communication of information between user groups such as scientists and local people so that things are lost in translation, unrealistic expectations regarding the development of climate information products for problem solving (especially with limited budget capacity and time); and differing priorities of stakeholders in terms of bringing climate information into decision-making processes.</p>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Stage 3 accordion -->
+        <div class="accordion-item border">
+            <!-- Stage 3 accordion: Header -->
+            <h2 class="accordion-header" id="action-3-header">
+                <button aria-controls="action-3-content" aria-expanded="false" class="accordion-button collapsed"
+                        data-bs-target="#action-3-content" data-bs-toggle="collapse" type="button">
+                    Stage 3
+                </button>
+            </h2>
+            <!-- Stage 3 accordion: Content -->
+            <div aria-labelledby="action-3-header" class="accordion-collapse collapse"
+                 data-bs-parent="#leadership-accordion" id="action-3-content">
+                <!--<div class="accordion-body"></div>-->
+
+                <!-- Start inner accordion -->
+                <div class="accordion accordion-flush" id="action-3-accordion">
+
+                    <!-- Stage 3/Action 3A accordion -->
+                    <div class="accordion-item p-4 bg-light">
+                        <!-- Stage 3/Action 3A accordion: Header -->
+                        <h2 class="accordion-header" id="action-3a-header">
+                            <button aria-controls="action-3a-content" aria-expanded="false"
+                                    class="accordion-button collapsed"
+                                    data-bs-target="#action-3a-content" data-bs-toggle="collapse" type="button">
+                                Action 3A - Use the right tools to bring the evidence base to life
+                            </button>
+                        </h2>
+                        <!-- Stage 2/Action 3A accordion: Content -->
+                        <div aria-labelledby="action-3a-header" class="accordion-collapse collapse"
+                             data-bs-parent="#action-3-accordion"
+                             id="action-3a-content">
+                            <div class="accordion-body">
+
+                                <p>Explore practical tools for gathering evidence and use technological innovations such as cloud processing and AI in conjunction with human analysis. Data collection systems need to be robust enough to respond to new policy demands.</p>
+
+                                <p>
+                                    <span class="fw-bold">Use an array of tools</span> - There are more open tools coming online all the time including satellite data, new modelling such as that being carried out by the
+                                    <a href="https://tyndall.ac.uk/projects/openclim/"
+                                       target="_blank">https://tyndall.ac.uk/projects/openclim/</a>
+                                    project and using AI to connect people through art to climate data e.g.
+                                    <a href="https://newreal.cc/research"
+                                       target="_blank">https://newreal.cc/research</a>
+                                </p>
+
+                                <p>Advanced tools such as developing scenarios, adaptation pathways, impact chains and options appraisal processes can be used to help ensure that evidence is being used to effectively understand the past and inform future decisions.</p>
+
+                                <p>
+                                    What are Climate Scenarios?<br>
+                                    Climate change scenarios are a powerful tool for understanding climate change, charting response strategies, and supporting climate policy making. Climate change scenarios are not about predicting the future but come in the form of projections of what can happen or pathways of how to reach certain goals. Climate change scenarios are usually used in pairs or larger sets which determine their context and meaning.
+                                </p>
+
+                                <p class="fst-italic fw-bold mb-0">Resources:</p>
+
+                                <p>
+                                    The Met Office has the UK Climate Projections
+                                    <a href="https://www.metoffice.gov.uk/research/approach/collaboration/ukcp "
+                                       target="_blank">https://www.metoffice.gov.uk/research/approach/collaboration/ukcp</a>
+                                </p>
+
+                                <p>
+                                    Irelands equivalent are here:
+                                    <a href="https://www.met.ie/epa-climate-projections-2020 "
+                                       target="_blank">https://www.met.ie/epa-climate-projections-2020</a>
+                                </p>
+
+                                <p>
+                                    An adaptation pathway is <span class="fw-bold">a decision-making strategy that is made up of a sequence of manageable steps or decision-points over time</span>.
+                                    Characteristics of the strategy are: Each decision-point is triggered by some change (environmental or social).  There is a recent review of Adaptation Pathways here:
+                                    <a href="https://www.sciencedirect.com/science/article/pii/S1462901120313836"
+                                       target="_blank">https://www.sciencedirect.com/science/article/pii/S1462901120313836</a>
+                                </p>
+
+                                <p>
+                                    <a href="https://www.gov.uk/government/publications/thames-estuary-2100-te2100/thames-estuary-2100-te2100"
+                                       target="_blank">https://www.gov.uk/government/publications/thames-estuary-2100-te2100/thames-estuary-2100-te2100</a>
+                                    - The Thames Estuary 2100 plan was one of the first adaptive pathway plans.
+                                </p>
+
+                                <p>
+                                    Climate Ready Clyde Report:
+                                    <a href="https://www.climatexchange.org.uk/research/projects/tidal-flooding-on-the-clyde-options-analysis-and-scoping-of-adaptation-pathways/"
+                                       target="_blank">https://www.climatexchange.org.uk/research/projects/tidal-flooding-on-the-clyde-options-analysis-and-scoping-of-adaptation-pathways/</a>
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Stage 3/Action 3B accordion -->
+                    <div class="accordion-item p-4 bg-light">
+                        <!-- Stage 3/Action 3B accordion: Header -->
+                        <h2 class="accordion-header" id="action-3b-header">
+                            <button aria-controls="action-3b-content" aria-expanded="false"
+                                    class="accordion-button collapsed"
+                                    data-bs-target="#action-3b-content" data-bs-toggle="collapse" type="button">
+                                Action 3B - Ensure that the evidence base is accessible and kept up to date so people can use it for decision-making
+                            </button>
+                        </h2>
+                        <!-- Stage 3/Action 3B accordion: Content -->
+                        <div aria-labelledby="action-3b-header" class="accordion-collapse collapse"
+                             data-bs-parent="#action-3-accordion"
+                             id="action-3b-content">
+                            <div class="accordion-body">
+
+                                <p>Ensure that current evidence is available in transparent, accessible and inclusive formats using a cross-sectoral database (or a guide on where to find data if it is not all accessible from one location), with assessments of evidence priorities as context shifts over time.</p>
+
+                                <p>
+                                    <span class="fw-bold">Communicate to the public</span>
+                                    the evidence supporting adaptation actions from the associated climate risks/impacts, including the cost benefit analysis, to gain support and promote understanding and learnings on the wider benefits of adaptation.
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Stage 3/Action 3C accordion -->
+                    <div class="accordion-item p-4 bg-light">
+                        <!-- Stage 3/Action 3C accordion: Header -->
+                        <h2 class="accordion-header" id="action-3c-header">
+                            <button aria-controls="action-3c-content" aria-expanded="false"
+                                    class="accordion-button collapsed"
+                                    data-bs-target="#action-3c-content" data-bs-toggle="collapse" type="button">
+                                Action 3C - Map the evidence and processes within the system to keep it dynamic and responsive
+                            </button>
+                        </h2>
+                        <!-- Stage 3/Action 3C accordion: Content -->
+                        <div aria-labelledby="action-3c-header" class="accordion-collapse collapse"
+                             data-bs-parent="#action-3-accordion"
+                             id="action-3c-content">
+                            <div class="accordion-body">
+
+                                <p>Integrate evidence into systems and models and mainstream it across sectors so it is part of decision-making considerations and is aligned with local decision-making needs and can be dynamic and responsive. Build understanding and monitor how adaptation actions interact to reduce emissions- & other co-benefits such as in relation to biodiversity.</p>
+
+                                <p>
+                                    <span class="fw-bold">Use Systems mapping</span>
+                                    - this is the creation of visual depictions of a system, such as its relationships and feedback loops, actors and trends. Systems mapping is intended to provide a simplified conceptual understanding of a complex system that, for collective action purposes, can get partners on the same page.
+                                </p>
+
+                                <p class="fst-italic fw-bold mb-0">Resources</p>
+
+                                <p>
+                                    <a href="https://rmi.org/systems-mapping-a-vital-ingredient-for-successful-partnerships/"
+                                       target="_blank">https://rmi.org/systems-mapping-a-vital-ingredient-for-successful-partnerships/</a>
+                                </p>
+
+                                <p>
+                                    <a href="https://openpolicy.blog.gov.uk/2022/01/24/tools-for-climate-policy-2-systems-mapping/"
+                                       target="_blank">https://openpolicy.blog.gov.uk/2022/01/24/tools-for-climate-policy-2-systems-mapping/</a>
+                                </p>
+
+                                <p>
+                                    <a href="https://www.qmu.ac.uk/media/ec3jworq/informing-adaptation-strategy-through-mapping-the-dynamics-linking-climate-change_cop26-version.pdf"
+                                       target="_blank">https://www.qmu.ac.uk/media/ec3jworq/informing-adaptation-strategy-through-mapping-the-dynamics-linking-climate-change_cop26-version.pdf</a>
+                                </p>
+
+                                <p>
+                                    <a href="https://rmi.org/systems-mapping-a-vital-ingredient-for-successful-partnerships/"
+                                       target="_blank">https://rmi.org/systems-mapping-a-vital-ingredient-for-successful-partnerships/</a>
+                                </p>
+
+                                <p>
+                                    <a href="https://www.futurelearn.com/info/courses/understanding-systems-thinking-in-healthcare/0/steps/76309"
+                                       target="_blank">https://www.futurelearn.com/info/courses/understanding-systems-thinking-in-healthcare/0/steps/76309</a>
+                                </p>
+
+                                <p>
+                                    <span class="fw-bold">Ensure the appropriate funding and resources are in place for long term monitoring and evaluation</span>
+                                    - that evidence is collected at the relevant spatial and temporal scale and is mainstreamed into work programmes. To ensure there are no conflicts in the evaluation of data partners should also have agreed common approaches to monitoring, sharing data, indicators and metrics beforehand.
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- spacer -->
+<div class="mt-5 col-md-12"></div>
+
+<!-- Content: middle of page -->
+<div class="container text-center px-0">
+    <img alt="Evidence" class="img-fluid" src="images/evidence_info_1296px.jpg">
+</div>
+
+<!-- spacer -->
+<div class="mt-5 col-md-12"></div>
+
+</body>
+</html>
