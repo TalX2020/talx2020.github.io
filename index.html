@@ -10,16 +10,66 @@
             integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        function changeImageOver(actionID) {
-            const myElement = document.getElementById(actionID);
-            myElement.style.opacity = "0.3"
+        function mouseOverHandler(actionID) {
+            // show effect
+            if (actionID) {
+                const myElement = document.getElementById(actionID);
+                myElement.style.opacity = "0.3"
+            }
         }
 
-        function changeImageOut(actionID) {
-            const myElement = document.getElementById(actionID);
-            myElement.style.opacity = "0"
+        function mouseOutHandler(actionID, tooltipID) {
+            // hide effect
+            if (actionID) {
+                const myElement = document.getElementById(actionID);
+                myElement.style.opacity = "0"
+            }
+            // hide tooltip
+            if (tooltipID) {
+                const tooltip = document.getElementById(tooltipID);
+                tooltip.style.display = "none";
+                tooltip.innerHTML = ""
+            }
+        }
+
+        function mouseMoveHandler(evt, tooltipID, text, position = 1) {
+            // show tooltip next to mouse pointer
+            if( tooltipID ) {
+                const tooltip = document.getElementById(tooltipID);
+                tooltip.innerHTML = text;
+                tooltip.style.display = "block";
+                // calculate position
+                const tooltipWidth = tooltip.offsetWidth
+                const tooltipHeight = tooltip.offsetHeight
+                if (position == 1) {
+                    // top-left
+                    tooltip.style.left = evt.pageX + 10 + 'px';
+                    tooltip.style.top = evt.pageY + 10 + 'px';
+                } else if (position == 2) {
+                    // top-right
+                    tooltip.style.left = evt.pageX - 10 - tooltipWidth + 'px';
+                    tooltip.style.top = evt.pageY + 10 + 'px';
+                } else if (position == 3) {
+                    // bottom-left
+                    tooltip.style.left = evt.pageX + 10 + 'px';
+                    tooltip.style.top = evt.pageY - 10 - tooltipHeight + 'px';
+                } else if (position == 4) {
+                    // bottom-right
+                    tooltip.style.left = evt.pageX - 10 - tooltipWidth + 'px';
+                    tooltip.style.top = evt.pageY - 10 - tooltipHeight + 'px';
+                }
+            }
         }
     </script>
+    <style>
+        #tooltipHero {
+            background: cornsilk;
+            border: 1px solid black;
+            border-radius: 5px;
+            padding: 5px;
+            text-align: center;
+        }
+    </style>
 </head>
 <body style="overflow-y: scroll">
 
@@ -77,12 +127,14 @@
 
     <!-- Interactive Graphic for md screen (696 pixel image) -->
     <div>
+        <div display="none" id="tooltipHero" style="position: absolute; display: none;"></div>
         <svg viewBox="0 0 2592 1216" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <image height="1216" width="2592" xlink:href="images/hero_image_2592px.jpg"></image>
 
             <!-- Leadership - SVG -->
-            <a onmouseout=changeImageOut("hero_image_leadership")
-               onmouseover=changeImageOver("hero_image_leadership")
+            <a onmousemove="mouseMoveHandler(evt, 'tooltipHero', '<b>Leadership</b>', 1)"
+               onmouseout="mouseOutHandler('hero_image_leadership', 'tooltipHero')"
+               onmouseover="mouseOverHandler('hero_image_leadership')"
                xlink:href="leadership.html">
                 <g fill="#000000" id="hero_image_leadership" opacity="0" stroke="none"
                    transform="translate(0.000000,1216.000000) scale(0.100000,-0.100000)">
@@ -115,8 +167,9 @@
             </a>
 
             <!-- Leadership 1A - SVG -->
-            <a onmouseout=changeImageOut("hero_image_leadership_1a")
-               onmouseover=changeImageOver("hero_image_leadership_1a")
+            <a onmousemove="mouseMoveHandler(evt, 'tooltipHero', '<b>Leadership - Action 1A</b><br>Create a vision for the future', 1)"
+               onmouseout="mouseOutHandler('hero_image_leadership_1a', 'tooltipHero')"
+               onmouseover="mouseOverHandler('hero_image_leadership_1a')"
                xlink:href="leadership.html#action-1a">
                 <g fill="#000000" id="hero_image_leadership_1a" opacity="0" stroke="none"
                    transform="translate(0.000000,1216.000000) scale(0.100000,-0.100000)">
@@ -140,8 +193,9 @@
             </a>
 
             <!-- Leadership 1B - SVG -->
-            <a onmouseout=changeImageOut("hero_image_leadership_1b")
-               onmouseover=changeImageOver("hero_image_leadership_1b")
+            <a onmousemove="mouseMoveHandler(evt, 'tooltipHero', '<b>Leadership - Action 1B</b><br>Use opportunities for change and use policy and legislation to support action', 1)"
+               onmouseout="mouseOutHandler('hero_image_leadership_1b', 'tooltipHero')"
+               onmouseover="mouseOverHandler('hero_image_leadership_1b')"
                xlink:href="leadership.html#action-1b">
                 <g fill="#000000" id="hero_image_leadership_1b" opacity="0" stroke="none"
                    transform="translate(0.000000,1216.000000) scale(0.100000,-0.100000)">
@@ -166,8 +220,9 @@
             </a>
 
             <!-- Leadership 1C - SVG -->
-            <a onmouseout=changeImageOut("hero_image_leadership_1c")
-               onmouseover=changeImageOver("hero_image_leadership_1c")
+            <a onmousemove="mouseMoveHandler(evt, 'tooltipHero', '<b>Leadership - Action 1C</b><br>Inspire and empower communities', 1)"
+               onmouseout="mouseOutHandler('hero_image_leadership_1c', 'tooltipHero')"
+               onmouseover="mouseOverHandler('hero_image_leadership_1c', 'tooltipHero')"
                xlink:href="leadership.html#action-1c">
                 <g fill="#000000" id="hero_image_leadership_1c" opacity="0" stroke="none"
                    transform="translate(0.000000,1216.000000) scale(0.100000,-0.100000)">
@@ -191,8 +246,9 @@
             </a>
 
             <!-- Leadership 2A - SVG -->
-            <a onmouseout=changeImageOut("hero_image_leadership_2a")
-               onmouseover=changeImageOver("hero_image_leadership_2a")
+            <a onmousemove="mouseMoveHandler(evt, 'tooltipHero', '<b>Leadership - Action 2A</b><br>Use the vision to motivate positive transformation', 1)"
+               onmouseout="mouseOutHandler('hero_image_leadership_2a', 'tooltipHero')"
+               onmouseover="mouseOverHandler('hero_image_leadership_2a')"
                xlink:href="leadership.html#action-2a">
                 <g fill="#000000" id="hero_image_leadership_2a" opacity="0" stroke="none"
                    transform="translate(0.000000,1216.000000) scale(0.100000,-0.100000)">
@@ -217,8 +273,9 @@
             </a>
 
             <!-- Leadership 2B - SVG -->
-            <a onmouseout=changeImageOut("hero_image_leadership_2b")
-               onmouseover=changeImageOver("hero_image_leadership_2b")
+            <a onmousemove="mouseMoveHandler(evt, 'tooltipHero', '<b>Leadership - Action 2B</b><br>Build Support for Action', 1)"
+               onmouseout="mouseOutHandler('hero_image_leadership_2b', 'tooltipHero')"
+               onmouseover="mouseOverHandler('hero_image_leadership_2b')"
                xlink:href="leadership.html#action-2b">
                 <g fill="#000000" id="hero_image_leadership_2b" opacity="0" stroke="none"
                    transform="translate(0.000000,1216.000000) scale(0.100000,-0.100000)">
@@ -245,8 +302,9 @@
             </a>
 
             <!-- Leadership 2C - SVG -->
-            <a onmouseout=changeImageOut("hero_image_leadership_2c")
-               onmouseover=changeImageOver("hero_image_leadership_2c")
+            <a onmousemove="mouseMoveHandler(evt, 'tooltipHero', '<b>Leadership - Action 2C</b><br>Create opportunities for leaders to emerge and grow', 1)"
+               onmouseout="mouseOutHandler('hero_image_leadership_2c', 'tooltipHero')"
+               onmouseover="mouseOverHandler('hero_image_leadership_2c')"
                xlink:href="leadership.html#action-2c">
                 <g fill="#000000" id="hero_image_leadership_2c" opacity="0" stroke="none"
                    transform="translate(0.000000,1216.000000) scale(0.100000,-0.100000)">
@@ -272,8 +330,9 @@
             </a>
 
             <!-- Leadership 3A - SVG -->
-            <a onmouseout=changeImageOut("hero_image_leadership_3a")
-               onmouseover=changeImageOver("hero_image_leadership_3a")
+            <a onmousemove="mouseMoveHandler(evt, 'tooltipHero', '<b>Leadership - Action 3A</b><br>Expand inclusive and representative adaptation', 1)"
+               onmouseout="mouseOutHandler('hero_image_leadership_3a', 'tooltipHero')"
+               onmouseover="mouseOverHandler('hero_image_leadership_3a')"
                xlink:href="leadership.html#action-3a">
                 <g fill="#000000" id="hero_image_leadership_3a" opacity="0" stroke="none"
                    transform="translate(0.000000,1216.000000) scale(0.100000,-0.100000)">
@@ -301,8 +360,9 @@
             </a>
 
             <!-- Leadership 3B - SVG -->
-            <a onmouseout=changeImageOut("hero_image_leadership_3b")
-               onmouseover=changeImageOver("hero_image_leadership_3b")
+            <a onmousemove="mouseMoveHandler(evt, 'tooltipHero', '<b>Leadership - Action 3B</b><br>Learn from setbacks to strengthen leadership', 1)"
+               onmouseout="mouseOutHandler('hero_image_leadership_3b', 'tooltipHero')"
+               onmouseover="mouseOverHandler('hero_image_leadership_3b')"
                xlink:href="leadership.html#action-3b">
                 <g fill="#000000" id="hero_image_leadership_3b" opacity="0" stroke="none"
                    transform="translate(0.000000,1216.000000) scale(0.100000,-0.100000)">
@@ -330,8 +390,9 @@
             </a>
 
             <!-- Leadership 3C - SVG -->
-            <a onmouseout=changeImageOut("hero_image_leadership_3c")
-               onmouseover=changeImageOver("hero_image_leadership_3c")
+            <a onmousemove="mouseMoveHandler(evt, 'tooltipHero', '<b>Leadership - Action 3C</b><br>Work with and inspire others towards wider transformation', 1)"
+               onmouseout="mouseOutHandler('hero_image_leadership_3c', 'tooltipHero')"
+               onmouseover="mouseOverHandler('hero_image_leadership_3c')"
                xlink:href="leadership.html#action-3c">
                 <g fill="#000000" id="hero_image_leadership_3c" opacity="0" stroke="none"
                    transform="translate(0.000000,1216.000000) scale(0.100000,-0.100000)">
@@ -359,8 +420,9 @@
             </a>
 
             <!-- Evidence - SVG -->
-            <a onmouseout=changeImageOut("hero_image_evidence")
-               onmouseover=changeImageOver("hero_image_evidence")
+            <a onmousemove="mouseMoveHandler(evt, 'tooltipHero', '<b>Evidence</b>', 1)"
+               onmouseout="mouseOutHandler('hero_image_evidence', 'tooltipHero')"
+               onmouseover="mouseOverHandler('hero_image_evidence')"
                xlink:href="evidence.html">
                 <g fill="#000000" id="hero_image_evidence" opacity="0" stroke="none"
                    transform="translate(0.000000,1216.000000) scale(0.100000,-0.100000)">
@@ -394,8 +456,9 @@
             </a>
 
             <!-- Evidence 1A - SVG -->
-            <a onmouseout=changeImageOut("hero_image_evidence_1a")
-               onmouseover=changeImageOver("hero_image_evidence_1a")
+            <a onmousemove="mouseMoveHandler(evt, 'tooltipHero', '<b>Evidence - Action 1A</b><br>Surveying existing evidence', 1)"
+               onmouseout="mouseOutHandler('hero_image_evidence_1a', 'tooltipHero')"
+               onmouseover="mouseOverHandler('hero_image_evidence_1a')"
                xlink:href="evidence.html#action-1a">
                 <g fill="#000000" id="hero_image_evidence_1a" opacity="0" stroke="none"
                    transform="translate(0.000000,1216.000000) scale(0.100000,-0.100000)">
@@ -420,8 +483,9 @@
             </a>
 
             <!-- Evidence 1B - SVG -->
-            <a onmouseout=changeImageOut("hero_image_evidence_1b")
-               onmouseover=changeImageOver("hero_image_evidence_1b")
+            <a onmousemove="mouseMoveHandler(evt, 'tooltipHero', '<b>Evidence - Action 1B</b><br>Co-develop shared evidence', 1)"
+               onmouseout="mouseOutHandler('hero_image_evidence_1b', 'tooltipHero')"
+               onmouseover="mouseOverHandler('hero_image_evidence_1b')"
                xlink:href="evidence.html#action-1b">
                 <g fill="#000000" id="hero_image_evidence_1b" opacity="0" stroke="none"
                    transform="translate(0.000000,1216.000000) scale(0.100000,-0.100000)">
@@ -445,8 +509,9 @@
             </a>
 
             <!-- Evidence 1C - SVG -->
-            <a onmouseout=changeImageOut("hero_image_evidence_1c")
-               onmouseover=changeImageOver("hero_image_evidence_1c")
+            <a onmousemove="mouseMoveHandler(evt, 'tooltipHero', '<b>Evidence - Action 1C</b><br>Setting in place monitoring, evaluation and learning', 1)"
+               onmouseout="mouseOutHandler('hero_image_evidence_1c', 'tooltipHero')"
+               onmouseover="mouseOverHandler('hero_image_evidence_1c')"
                xlink:href="evidence.html#action-1c">
                 <g fill="#000000" id="hero_image_evidence_1c" opacity="0" stroke="none"
                    transform="translate(0.000000,1216.000000) scale(0.100000,-0.100000)">
@@ -470,8 +535,9 @@
             </a>
 
             <!-- Evidence 2A - SVG -->
-            <a onmouseout=changeImageOut("hero_image_evidence_2a")
-               onmouseover=changeImageOver("hero_image_evidence_2a")
+            <a onmousemove="mouseMoveHandler(evt, 'tooltipHero', '<b>Evidence - Action 2A</b><br>Co-Develop and strengthen evidence to inform adaptation planning and action', 1)"
+               onmouseout="mouseOutHandler('hero_image_evidence_2a', 'tooltipHero')"
+               onmouseover="mouseOverHandler('hero_image_evidence_2a')"
                xlink:href="evidence.html#action-2a">
                 <g fill="#000000" id="hero_image_evidence_2a" opacity="0" stroke="none"
                    transform="translate(0.000000,1216.000000) scale(0.100000,-0.100000)">
@@ -497,8 +563,9 @@
             </a>
 
             <!-- Evidence 2B - SVG -->
-            <a onmouseout=changeImageOut("hero_image_evidence_2b")
-               onmouseover=changeImageOver("hero_image_evidence_2b")
+            <a onmousemove="mouseMoveHandler(evt, 'tooltipHero', '<b>Evidence - Action 2B</b><br>Co-Develop the framework for risk assessment and implement it', 1)"
+               onmouseout="mouseOutHandler('hero_image_evidence_2b', 'tooltipHero')"
+               onmouseover="mouseOverHandler('hero_image_evidence_2b')"
                xlink:href="evidence.html#action-2b">
                 <g fill="#000000" id="hero_image_evidence_2b" opacity="0" stroke="none"
                    transform="translate(0.000000,1216.000000) scale(0.100000,-0.100000)">
@@ -525,8 +592,9 @@
             </a>
 
             <!-- Evidence 2C - SVG -->
-            <a onmouseout=changeImageOut("hero_image_evidence_2c")
-               onmouseover=changeImageOver("hero_image_evidence_2c")
+            <a onmousemove="mouseMoveHandler(evt, 'tooltipHero', '<b>Evidence - Action 2C</b><br>Plan development, tracking, and sharing of evidence', 1)"
+               onmouseout="mouseOutHandler('hero_image_evidence_2c', 'tooltipHero')"
+               onmouseover="mouseOverHandler('hero_image_evidence_2c')"
                xlink:href="evidence.html#action-2c">
                 <g fill="#000000" id="hero_image_evidence_2c" opacity="0" stroke="none"
                    transform="translate(0.000000,1216.000000) scale(0.100000,-0.100000)">
@@ -551,8 +619,9 @@
             </a>
 
             <!-- Evidence 3A - SVG -->
-            <a onmouseout=changeImageOut("hero_image_evidence_3a")
-               onmouseover=changeImageOver("hero_image_evidence_3a")
+            <a onmousemove="mouseMoveHandler(evt, 'tooltipHero', '<b>Evidence - Action 3A</b><br>Use the right tools to bring the evidence base to life', 1)"
+               onmouseout="mouseOutHandler('hero_image_evidence_3a', 'tooltipHero')"
+               onmouseover="mouseOverHandler('hero_image_evidence_3a')"
                xlink:href="evidence.html#action-3a">
                 <g fill="#000000" id="hero_image_evidence_3a" opacity="0" stroke="none"
                    transform="translate(0.000000,1216.000000) scale(0.100000,-0.100000)">
@@ -581,8 +650,9 @@
             </a>
 
             <!-- Evidence 3B - SVG -->
-            <a onmouseout=changeImageOut("hero_image_evidence_3b")
-               onmouseover=changeImageOver("hero_image_evidence_3b")
+            <a onmousemove="mouseMoveHandler(evt, 'tooltipHero', '<b>Evidence - Action 3B</b><br>Ensure that the evidence base is accessible and kept up to date so people can use it for decision-making', 1)"
+               onmouseout="mouseOutHandler('hero_image_evidence_3b', 'tooltipHero')"
+               onmouseover="mouseOverHandler('hero_image_evidence_3b')"
                xlink:href="evidence.html#action-3b">
                 <g fill="#000000" id="hero_image_evidence_3b" opacity="0" stroke="none"
                    transform="translate(0.000000,1216.000000) scale(0.100000,-0.100000)">
@@ -611,8 +681,9 @@
             </a>
 
             <!-- Evidence 3C - SVG -->
-            <a onmouseout=changeImageOut("hero_image_evidence_3c")
-               onmouseover=changeImageOver("hero_image_evidence_3c")
+            <a onmousemove="mouseMoveHandler(evt, 'tooltipHero', '<b>Evidence - Action 3C</b><br>Map the evidence and processes within the system to keep it dynamic and responsive', 1)"
+               onmouseout="mouseOutHandler('hero_image_evidence_3c', 'tooltipHero')"
+               onmouseover="mouseOverHandler('hero_image_evidence_3c')"
                xlink:href="evidence.html#action-3c">
                 <g fill="#000000" id="hero_image_evidence_3c" opacity="0" stroke="none"
                    transform="translate(0.000000,1216.000000) scale(0.100000,-0.100000)">
@@ -641,8 +712,9 @@
             </a>
 
             <!-- Partnership - SVG -->
-            <a onmouseout=changeImageOut("hero_image_partnership")
-               onmouseover=changeImageOver("hero_image_partnership")
+            <a onmousemove="mouseMoveHandler(evt, 'tooltipHero', '<b>Partnership</b>', 1)"
+               onmouseout="mouseOutHandler('hero_image_partnership', 'tooltipHero')"
+               onmouseover="mouseOverHandler('hero_image_partnership')"
                xlink:href="partnership.html">
                 <g fill="#000000" id="hero_image_partnership" opacity="0" stroke="none"
                    transform="translate(0.000000,1216.000000) scale(0.100000,-0.100000)">
@@ -660,8 +732,9 @@
             </a>
 
             <!-- Partnership 1A - SVG -->
-            <a onmouseout=changeImageOut("hero_image_partnership_1a")
-               onmouseover=changeImageOver("hero_image_partnership_1a")
+            <a onmousemove="mouseMoveHandler(evt, 'tooltipHero', '<b>Partnership - Action 1A</b><br>Build relationships', 1)"
+               onmouseout="mouseOutHandler('hero_image_partnership_1a', 'tooltipHero')"
+               onmouseover="mouseOverHandler('hero_image_partnership_1a')"
                xlink:href="partnership.html#action-1a">
                 <g fill="#000000" id="hero_image_partnership_1a" opacity="0" stroke="none"
                    transform="translate(0.000000,1216.000000) scale(0.100000,-0.100000)">
@@ -686,8 +759,9 @@
             </a>
 
             <!-- Partnership 1B - SVG -->
-            <a onmouseout=changeImageOut("hero_image_partnership_1b")
-               onmouseover=changeImageOver("hero_image_partnership_1b")
+            <a onmousemove="mouseMoveHandler(evt, 'tooltipHero', '<b>Partnership - Action 1B</b><br>Make the case for change', 1)"
+               onmouseout="mouseOutHandler('hero_image_partnership_1b', 'tooltipHero')"
+               onmouseover="mouseOverHandler('hero_image_partnership_1b')"
                xlink:href="partnership.html#action-1b">
                 <g fill="#000000" id="hero_image_partnership_1b" opacity="0" stroke="none"
                    transform="translate(0.000000,1216.000000) scale(0.100000,-0.100000)">
@@ -713,8 +787,9 @@
             </a>
 
             <!-- Partnership 1C - SVG -->
-            <a onmouseout=changeImageOut("hero_image_partnership_1c")
-               onmouseover=changeImageOver("hero_image_partnership_1c")
+            <a onmousemove="mouseMoveHandler(evt, 'tooltipHero', '<b>Partnership - Action 1C</b><br>Focus on locally led adaptation', 1)"
+               onmouseout="mouseOutHandler('hero_image_partnership_1c', 'tooltipHero')"
+               onmouseover="mouseOverHandler('hero_image_partnership_1c')"
                xlink:href="partnership.html#action-1c">
                 <g fill="#000000" id="hero_image_partnership_1c" opacity="0" stroke="none"
                    transform="translate(0.000000,1216.000000) scale(0.100000,-0.100000)">
@@ -740,8 +815,9 @@
             </a>
 
             <!-- Partnership 2A - SVG -->
-            <a onmouseout=changeImageOut("hero_image_partnership_2a")
-               onmouseover=changeImageOver("hero_image_partnership_2a")
+            <a onmousemove="mouseMoveHandler(evt, 'tooltipHero', '<b>Partnership - Action 2A</b><br>Put in place strong supporting structures', 1)"
+               onmouseout="mouseOutHandler('hero_image_partnership_2a', 'tooltipHero')"
+               onmouseover="mouseOverHandler('hero_image_partnership_2a')"
                xlink:href="partnership.html#action-2a">
                 <g fill="#000000" id="hero_image_partnership_2a" opacity="0" stroke="none"
                    transform="translate(0.000000,1216.000000) scale(0.100000,-0.100000)">
@@ -767,8 +843,9 @@
             </a>
 
             <!-- Partnership 2B - SVG -->
-            <a onmouseout=changeImageOut("hero_image_partnership_2b")
-               onmouseover=changeImageOver("hero_image_partnership_2b")
+            <a onmousemove="mouseMoveHandler(evt, 'tooltipHero', '<b>Partnership - Action 2B</b><br>Commit to system change and transformation', 1)"
+               onmouseout="mouseOutHandler('hero_image_partnership_2b', 'tooltipHero')"
+               onmouseover="mouseOverHandler('hero_image_partnership_2b')"
                xlink:href="partnership.html#action-2b">
                 <g fill="#000000" id="hero_image_partnership_2b" opacity="0" stroke="none"
                    transform="translate(0.000000,1216.000000) scale(0.100000,-0.100000)">
@@ -794,8 +871,9 @@
             </a>
 
             <!-- Partnership 2C - SVG -->
-            <a onmouseout=changeImageOut("hero_image_partnership_2c")
-               onmouseover=changeImageOver("hero_image_partnership_2c")
+            <a onmousemove="mouseMoveHandler(evt, 'tooltipHero', '<b>Partnership - Action 2C</b><br>Develop locally led adaptation actions and projects', 1)"
+            <a onmouseout="mouseOutHandler('hero_image_partnership_2c', 'tooltipHero')"
+               onmouseover="mouseOverHandler('hero_image_partnership_2c')"
                xlink:href="partnership.html#action-2c">
                 <g fill="#000000" id="hero_image_partnership_2c" opacity="0" stroke="none"
                    transform="translate(0.000000,1216.000000) scale(0.100000,-0.100000)">
@@ -820,8 +898,9 @@
             </a>
 
             <!-- Partnership 3A - SVG -->
-            <a onmouseout=changeImageOut("hero_image_partnership_3a")
-               onmouseover=changeImageOver("hero_image_partnership_3a")
+            <a onmousemove="mouseMoveHandler(evt, 'tooltipHero', '<b>Partnership - Action 3A</b><br>Strengthen the partnership', 1)"
+               onmouseout="mouseOutHandler('hero_image_partnership_3a', 'tooltipHero')"
+               onmouseover="mouseOverHandler('hero_image_partnership_3a')"
                xlink:href="partnership.html#action-3a">
                 <g fill="#000000" id="hero_image_partnership_3a" opacity="0" stroke="none"
                    transform="translate(0.000000,1216.000000) scale(0.100000,-0.100000)">
@@ -850,8 +929,9 @@
             </a>
 
             <!-- Partnership 3B - SVG -->
-            <a onmouseout=changeImageOut("hero_image_partnership_3b")
-               onmouseover=changeImageOver("hero_image_partnership_3b")
+            <a onmousemove="mouseMoveHandler(evt, 'tooltipHero', '<b>Partnership - Action 3B</b><br>Focus on delivery', 1)"
+               onmouseout="mouseOutHandler('hero_image_partnership_3b', 'tooltipHero')"
+               onmouseover="mouseOverHandler('hero_image_partnership_3b')"
                xlink:href="partnership.html#action-3b">
                 <g fill="#000000" id="hero_image_partnership_3b" opacity="0" stroke="none"
                    transform="translate(0.000000,1216.000000) scale(0.100000,-0.100000)">
@@ -880,8 +960,9 @@
             </a>
 
             <!-- Partnership 3C - SVG -->
-            <a onmouseout=changeImageOut("hero_image_partnership_3c")
-               onmouseover=changeImageOver("hero_image_partnership_3c")
+            <a onmousemove="mouseMoveHandler(evt, 'tooltipHero', '<b>Partnership - Action 3C</b><br>Reflect, evaluate and learn', 1)"
+               onmouseout="mouseOutHandler('hero_image_partnership_3c', 'tooltipHero')"
+               onmouseover="mouseOverHandler('hero_image_partnership_3c')"
                xlink:href="partnership.html#action-3c">
                 <g fill="#000000" id="hero_image_partnership_3c" opacity="0" stroke="none"
                    transform="translate(0.000000,1216.000000) scale(0.100000,-0.100000)">
@@ -908,8 +989,9 @@
             </a>
 
             <!-- Resource - SVG -->
-            <a onmouseout=changeImageOut("hero_image_resource")
-               onmouseover=changeImageOver("hero_image_resource")
+            <a onmousemove="mouseMoveHandler(evt, 'tooltipHero', '<b>Resource</b>', 1)"
+               onmouseout="mouseOutHandler('hero_image_resource', 'tooltipHero')"
+               onmouseover="mouseOverHandler('hero_image_resource')"
                xlink:href="resource.html">
                 <g fill="#000000" id="hero_image_resource" opacity="0" stroke="none"
                    transform="translate(0.000000,1216.000000) scale(0.100000,-0.100000)">
@@ -939,8 +1021,9 @@
             </a>
 
             <!-- Resource 1A - SVG -->
-            <a onmouseout=changeImageOut("hero_image_resource_1a")
-               onmouseover=changeImageOver("hero_image_resource_1a")
+            <a onmousemove="mouseMoveHandler(evt, 'tooltipHero', '<b>Resource - Action 1A</b><br>Recognise existing member capacity and capability', 1)"
+            <a onmouseout="mouseOutHandler('hero_image_resource_1a', 'tooltipHero')"
+               onmouseover="mouseOverHandler('hero_image_resource_1a')"
                xlink:href="resource.html#action-1a">
                 <g fill="#000000" id="hero_image_resource_1a" opacity="0" stroke="none"
                    transform="translate(0.000000,1216.000000) scale(0.100000,-0.100000)">
@@ -967,8 +1050,9 @@
             </a>
 
             <!-- Resource 1B - SVG -->
-            <a onmouseout=changeImageOut("hero_image_resource_1b")
-               onmouseover=changeImageOver("hero_image_resource_1b")
+            <a onmousemove="mouseMoveHandler(evt, 'tooltipHero', '<b>Resource - Action 1B</b><br>Map existing funding sources and opportunities', 1)"
+               onmouseout="mouseOutHandler('hero_image_resource_1b', 'tooltipHero')"
+               onmouseover="mouseOverHandler('hero_image_resource_1b')"
                xlink:href="resource.html#action-1b">
                 <g fill="#000000" id="hero_image_resource_1b" opacity="0" stroke="none"
                    transform="translate(0.000000,1216.000000) scale(0.100000,-0.100000)">
@@ -993,8 +1077,9 @@
             </a>
 
             <!-- Resource 1C - SVG -->
-            <a onmouseout=changeImageOut("hero_image_resource_1c")
-               onmouseover=changeImageOver("hero_image_resource_1c")
+            <a onmousemove="mouseMoveHandler(evt, 'tooltipHero', '<b>Resource - Action 1C</b><br>Develop fair and equal resourcing approaches', 1)"
+               onmouseout="mouseOutHandler('hero_image_resource_1c', 'tooltipHero')"
+               onmouseover="mouseOverHandler('hero_image_resource_1c')"
                xlink:href="resource.html#action-1c">
                 <g fill="#000000" id="hero_image_resource_1c" opacity="0" stroke="none"
                    transform="translate(0.000000,1216.000000) scale(0.100000,-0.100000)">
@@ -1020,8 +1105,9 @@
             </a>
 
             <!-- Resource 2A - SVG -->
-            <a onmouseout=changeImageOut("hero_image_resource_2a")
-               onmouseover=changeImageOver("hero_image_resource_2a")
+            <a onmousemove="mouseMoveHandler(evt, 'tooltipHero', '<b>Resource - Action 2A</b><br>Create coordinator position to support work planning and implementation', 1)"
+               onmouseout="mouseOutHandler('hero_image_resource_2a', 'tooltipHero')"
+               onmouseover="mouseOverHandler('hero_image_resource_2a')"
                xlink:href="resource.html#action-2a">
                 <g fill="#000000" id="hero_image_resource_2a" opacity="0" stroke="none"
                    transform="translate(0.000000,1216.000000) scale(0.100000,-0.100000)">
@@ -1050,8 +1136,9 @@
             </a>
 
             <!-- Resource 2B - SVG -->
-            <a onmouseout=changeImageOut("hero_image_resource_2b")
-               onmouseover=changeImageOver("hero_image_resource_2b")
+            <a onmousemove="mouseMoveHandler(evt, 'tooltipHero', '<b>Resource - Action 2B</b><br>Build capacity to understand funding and finance options', 1)"
+               onmouseout="mouseOutHandler('hero_image_resource_2b', 'tooltipHero')"
+               onmouseover="mouseOverHandler('hero_image_resource_2b')"
                xlink:href="resource.html#action-2b">
                 <g fill="#000000" id="hero_image_resource_2b" opacity="0" stroke="none"
                    transform="translate(0.000000,1216.000000) scale(0.100000,-0.100000)">
@@ -1080,8 +1167,10 @@
             </a>
 
             <!-- Resource 2C - SVG -->
-            <a onmouseout=changeImageOut("hero_image_resource_2c")
-               onmouseover=changeImageOver("hero_image_resource_2c")
+            <a onmousemove="mouseMoveHandler(evt, 'tooltipHero', '<b>Resource - Action 2C</b><br>Identify and secure revenue streams and agree mechanisms for resource\n'+
+'                                allocation and prioritisation', 1)"
+               onmouseout="mouseOutHandler('hero_image_resource_2c', 'tooltipHero')"
+               onmouseover="mouseOverHandler('hero_image_resource_2c')"
                xlink:href="resource.html#action-2c">
                 <g fill="#000000" id="hero_image_resource_2c" opacity="0" stroke="none"
                    transform="translate(0.000000,1216.000000) scale(0.100000,-0.100000)">
@@ -1106,8 +1195,10 @@
             </a>
 
             <!-- Resource 3A - SVG -->
-            <a onmouseout=changeImageOut("hero_image_resource_3a")
-               onmouseover=changeImageOver("hero_image_resource_3a")
+            <a onmousemove="mouseMoveHandler(evt, 'tooltipHero', '<b>Resource - Action 3A</b><br>Commit resource for continual skills development of partnership staff and\n'+
+'                                members', 1)"
+               onmouseout="mouseOutHandler('hero_image_resource_3a', 'tooltipHero')"
+               onmouseover="mouseOverHandler('hero_image_resource_3a')"
                xlink:href="resource.html#action-3a">
                 <g fill="#000000" id="hero_image_resource_3a" opacity="0" stroke="none"
                    transform="translate(0.000000,1216.000000) scale(0.100000,-0.100000)">
@@ -1136,8 +1227,9 @@
             </a>
 
             <!-- Resource 3B - SVG -->
-            <a onmouseout=changeImageOut("hero_image_resource_3b")
-               onmouseover=changeImageOver("hero_image_resource_3b")
+            <a onmousemove="mouseMoveHandler(evt, 'tooltipHero', '<b>Resource - Action 3B</b><br>Capitalise on assets to further develop the partnership', 1)"
+               onmouseout="mouseOutHandler('hero_image_resource_3b', 'tooltipHero')"
+               onmouseover="mouseOverHandler('hero_image_resource_3b')"
                xlink:href="resource.html#action-3b">
                 <g fill="#000000" id="hero_image_resource_3b" opacity="0" stroke="none"
                    transform="translate(0.000000,1216.000000) scale(0.100000,-0.100000)">
@@ -1167,8 +1259,10 @@
             </a>
 
             <!-- Resource 3C - SVG -->
-            <a onmouseout=changeImageOut("hero_image_resource_3c")
-               onmouseover=changeImageOver("hero_image_resource_3c")
+            <a onmousemove="mouseMoveHandler(evt, 'tooltipHero', '<b>Resource - Action 3C</b><br>Achieve long term funding and finance and ensure fair distribution of\n'+
+'                                resources', 1)"
+               onmouseout="mouseOutHandler('hero_image_resource_3c', 'tooltipHero')"
+               onmouseover="mouseOverHandler('hero_image_resource_3c')"
                xlink:href="resource.html#action-3c">
                 <g fill="#000000" id="hero_image_resource_3c" opacity="0" stroke="none"
                    transform="translate(0.000000,1216.000000) scale(0.100000,-0.100000)">
@@ -1213,8 +1307,8 @@
                     <image class="img-fluid" height="669" width="672" xlink:href="images/leadership_672px.jpg"></image>
 
                     <!-- Leadership - SVG -->
-                    <a onmouseout=changeImageOut("leadership_672px")
-                       onmouseover=changeImageOver("leadership_672px")
+                    <a onmouseout="mouseOutHandler('leadership_672px')"
+                       onmouseover="mouseOverHandler('leadership_672px')"
                        xlink:href="leadership.html">
                         <g fill="#000000" id="leadership_672px" opacity="0" stroke="none"
                            transform="translate(0.000000,669.000000) scale(0.100000,-0.100000)">
@@ -1251,8 +1345,8 @@
                     <image class="img-fluid" height="693" width="672" xlink:href="images/evidence_672px.jpg"></image>
 
                     <!-- Evidence - SVG -->
-                    <a onmouseout=changeImageOut("evidence_672px")
-                       onmouseover=changeImageOver("evidence_672px")
+                    <a onmouseout="mouseOutHandler('evidence_672px')"
+                       onmouseover="mouseOverHandler('evidence_672px', null)"
                        xlink:href="evidence.html">
                         <g fill="#000000" id="evidence_672px" opacity="0" stroke="none"
                            transform="translate(0.000000,693.000000) scale(0.100000,-0.100000)">
@@ -1289,8 +1383,8 @@
                     <image class="img-fluid" height="634" width="672" xlink:href="images/partnership_672px.jpg"></image>
 
                     <!-- Partnership - SVG -->
-                    <a onmouseout=changeImageOut("partnership_672px")
-                       onmouseover=changeImageOver("partnership_672px")
+                    <a onmouseout="mouseOutHandler('partnership_672px')"
+                       onmouseover="mouseOverHandler('partnership_672px', null)"
                        xlink:href="partnership.html">
                         <g fill="#000000" id="partnership_672px" opacity="0" stroke="none"
                            transform="translate(0.000000,634.000000) scale(0.100000,-0.100000)">
@@ -1314,8 +1408,8 @@
                     <image class="img-fluid" height="670" width="672" xlink:href="images/resource_672px.jpg"></image>
 
                     <!-- Resource - SVG -->
-                    <a onmouseout=changeImageOut("resource_672px")
-                       onmouseover=changeImageOver("resource_672px")
+                    <a onmouseout="mouseOutHandler('resource_672px')"
+                       onmouseover="mouseOverHandler('resource_672px', null)"
                        xlink:href="resource.html">
                         <g fill="#000000" id="resource_672px" opacity="0" stroke="none"
                            transform="translate(0.000000,670.000000) scale(0.100000,-0.100000)">
